@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>IBS</title>
+
+    <!-- Bootstrap-CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Besondere Stile für diese Vorlage -->
+    <link href="css/starter-template.css" rel="stylesheet">
+    
+    <!-- Unterstützung für Media Queries und HTML5-Elemente in IE8 über HTML5 shim und Respond.js -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Navigation ein-/ausblenden</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand">IBS</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Start</a></li>
+            <li class="active"><a href="impressum.html">Impressum</a></li>
+            <li class="active"><a href="suchformular.html">Wikipedia(DE) Suchformular</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="starter-template">
+        
+        <h1>Wikipedia(DE) Suche</h1>
+        <a href="http://wave.webaim.org/report#/http://ramazanakkas.cloudcontrolled.com/bootstrap/suchformular.html">
+						<img src="wcag2AAA.gif" alt="WCAG 2.0 AAA und Section 508 Richtlinien-Prüfung"/>
+		</a>
+        
+       <form class="form-horizontal" name="search" method="post" action="http://de.wikipedia.org/wiki/Spezial:Suche" role="form">
+			<fieldset>
+				<div class="form-group">
+					<p><label class="control-label" for="search" tabindex="1">Suchbegriff:</label></p>
+								<input class="form-control" type="text" name="search" id="search" tabindex="2" />
+				</div>
+				<div class="form-group">
+					<p><input class="btn btn-default" type="submit" name="go" id="go"value="Artikelsuche" tabindex="3"/>
+						<input class="btn btn-default" type="submit" name="fulltext" id="fulltext"
+										value="Volltextsuche" tabindex="4"/>
+					</p>
+				</div>
+			</fieldset>
+		</form>
+      </div>
+	</div>
+
+    <!-- Bootstrap-JavaScript
+    ================================================== -->
+    <!-- Am Ende des Dokuments platziert, damit Seiten schneller laden -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10-Anzeigefenster-Hack für Fehler auf Surface und Desktop-Windows-8 -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
