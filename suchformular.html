@@ -57,12 +57,14 @@
 			<fieldset>
 				<legend>Wikipedia(DE) Suche</legend>
 				<div class="form-group">
-					<p><label class="control-label" for="search">Suchbegriff:</label></p>
-								<input class="form-control" type="text" placeholder="Suchbegriff" name="search" id="search"/>
+					<p>
+						<label class="control-label" for="search">Suchbegriff:</label></p>
+						<input class="form-control" type="text" placeholder="Suchbegriff" name="search" id="search"/>
 				</div>
 				<div class="form-group">
-					<p><input class="btn btn-default" type="button" onclick="validate(1)" name="text" id="text" value="Artikelsuche"/>
-						<input class="btn btn-default" type="button" onclick="validate(0)" name="fulltext" id="fulltext" value="Volltextsuche"/>
+					<p>
+						<input class="btn btn-default" type="button" onclick="valid(1)" name="text" id="text" value="Artikelsuche" />
+						<input class="btn btn-default" type="button" onclick="valid(0)" name="fulltext" id="fulltext" value="Volltextsuche" />
 					</p>
 				</div>
 			</fieldset>
@@ -71,31 +73,31 @@
 	</div>
 	
 	<script type="text/javascript">
-	var validate=function(id){
+	var valid=function(id){
 		var search=document.getElementById("search").value;
-		if(search.length===0||search.length>=220||onlySpace(search)){
+		if(search.length===0||search.length>=220||nurLeerzeichen(search)){
 			$(document).ready(function(){
 				var $p=$("<p>Dieser Suchbegriff ist ungültig!</p>");
 				$('#search').after($p);
-				$p.fadeOut(4000);
+				$p.fadeOut(2000);
 			});
 		}
 		else{
 			if(id===0){
-				var g=document.getElementById("wikiform");
-				g.action="http://de.wikipedia.org/wiki/Spezial:Suche?fulltext="+search;
-				g.submit();
+				var i=document.getElementById("wikiform");
+				i.action="http://de.wikipedia.org/wiki/Spezial:Suche?fulltext="+search;
+				i.submit();
 			}
 			else {
-				var g=document.getElementById("wikiform");
-				g.action="http://de.wikipedia.org/wiki/Spezial:Suche?search="+search+"&text=ArtikelSuche";
-				g.submit();
+				var i=document.getElementById("wikiform");
+				i.action="http://de.wikipedia.org/wiki/Spezial:Suche?"+search;
+				i.submit();
 			}
 		}
 	}
-	var onlySpace=function(s){
-		for (var i=0;i<s.length;i++){
-			if(!(s[i]===" "))return false;
+	var nurLeerzeichen=function(j){
+		for (var i=0;i<j.length;i++){
+			if(!(j[i]===" "))return false;
 		}
 		return true;
 	}
