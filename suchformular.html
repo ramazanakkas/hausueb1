@@ -82,7 +82,7 @@
  	<script type="text/javascript">
 	var valid=function(id){
 		var search=document.getElementById("search").value;
-		if(search.length===0||search.length>=220||nurLeerzeichen(search)){
+		if(search.length===0||search.length>=50||nurLeerzeichen(search)){
 			$(document).ready(function(){
 				var $p=$("<p>Dieser Suchbegriff ist ungültig!</p>");
 				$('#search').after($p);
