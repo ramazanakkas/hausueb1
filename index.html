@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="icon" href="../../favicon.ico"> -->
-
+    <link rel="icon" href="../../favicon.ico">
+   
     <title>IBS</title>
 
     <!-- Bootstrap core CSS -->
@@ -41,40 +41,54 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="index.html">Start</a></li>            
-            <li class="active"><a href="suchformular.html" target="_blank">Wikipedia(DE) Suchformular</a></li>
             <li class="active"><a href="CountDown/index.html" target="_blank">CountDownApp</a></li>
             <li class="active"><a href="impressum.html" target="_blank">Impressum</a></li>
             <li class="active"><a href="datenschutz.html" target="_blank">Datenschutz</a></li>
-          </ul>
+          </ul>          
+			<form class="navbar-form navbar-right" name="search" role="form" method="post" action="http://de.wikipedia.org/wiki/Spezial:Suche" id="wikiform">
+				<fieldset>				
+					<div class="form-group">
+							<input class="form-control" type="search" placeholder="Wikipedia" name="search" id="search" required="required" maxLength=100 />
+					</div>
+					<div class="form-group">				
+							<input class="btn btn-primery" type="button" onclick="valid(1)" name="go" id="go" value="Artikelsuche" />
+							<input class="btn btn-primery" type="button" onclick="valid(0)" name="fulltext" id="fulltext" value="Volltextsuche" />				
+					</div>
+				</fieldset>
+			</form>         
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 	
 	<div class="jumbotron">
       <div class="container">
-        <h1>Willkommen</h1>
-        <p>Diese Seite ist im Rahmen der IBS Vorlesung an der THM entstanden. </p>
+        <h1>Website in der Cloud</h1>
+        <p>Dieses Projekt ist im Rahmen der IBS Vorlesung an der <a href="http://www.thm.de">THM</a> entstanden. </p>
       </div>
     </div>
 	
-    <div class="container">
-      <div class="starter-template">
+    <div class="starter-template">
+      <div class="container">
         <h2>Hausübungen</h2>
         <p>Hallo Prüfer,<br> hier die Links zu den Hausübungen 1 + 2:</p>
-        <ul>
-        	<li><a href="http://ramazanakkas1.cloudcontrolled.com" target="_blank">Meine Webseite bei Cloudcontrol</a></li>
-        	<li><a href="https://github.com/ramazanakkas/hausueb1/pull/1" target="_blank">Pull Request (von andere)</a></li>
-        	<li><a href="https://github.com/Ado85/webeng2014/pull/1" target="_blank">Pull Request (von mir)</a></li>
-        	<li><a href="http://www.codecademy.com/rakkas/" target="_blank">Codecademy</a></li>
-        	<li><a href="suchformular.html" target="_blank">Wikipedia(DE) Suchformular</a></li>
-        	<li><a href="impressum.html" target="_blank">Impressum</a></li>
-        	<br>
-        	<li><a href="CountDown/index.html" target="_blank">CountDownApp</a></li>
-        </ul>
+        
+        <div>
+        	<ul>
+        	<li><a href="http://ramazanakkas1.cloudcontrolled.com" role="button" target="_blank">Meine Webseite bei Cloudcontrol</a></li>
+        	<li><a href="https://github.com/ramazanakkas/hausueb1/pull/1" role="button" target="_blank">Pull Request (von andere)</a></li>
+        	<li><a href="https://github.com/Ado85/webeng2014/pull/1" role="button" target="_blank">Pull Request (von mir)</a></li>
+        	<li><a href="http://www.codecademy.com/rakkas/" role="button" target="_blank">Codecademy</a></li>
+        	<li><a href="suchformular.html" role="button" target="_blank">Wikipedia(DE) Suchformular</a></li>
+        	<li><a href="impressum.html" role="button" target="_blank">Impressum</a></li>
+        	<br>        	
+        	<li><a href="CountDown/index.html" role="button" target="_blank">CountDownApp</a></li>
+        	</ul>
+        	
+        </div>
       </div>
-    </div><!-- /.container -->
-	
-
+    </div>
+    
+    
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

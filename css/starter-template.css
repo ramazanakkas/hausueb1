@@ -9,3 +9,8 @@ body {
 ul {
 	text-align: left;
 }
+
+ul a {
+	color: black;
+}
+

@@ -54,18 +54,18 @@
 						<img src="wcag2AAA.gif" alt="Auf WCAG 2.0 AAA und Section 508 Richtlinien Prüfung Logo"/>
 		</a>
         
-       <form class="form-horizontal" name="search" method="post" action="http://de.wikipedia.org/wiki/Spezial:Suche" role="form" id="wikiform">
+       <form class="form-horizontal" name="search" role="form" method="post" action="http://de.wikipedia.org/wiki/Spezial:Suche" id="wikiform">
 			<fieldset>
 				<legend>Wikipedia(DE) Suche</legend>
 				<div class="form-group">
 					<p>
 						<label class="control-label" for="search">Suchbegriff:</label></p>
-						<input class="form-control" type="text" placeholder="Suchbegriff" name="search" id="search" value="" required="required" maxLength=50 />
+						<input class="form-control" type="search" placeholder="Suchbegriff" name="search" id="search" required="required" maxLength=100 />
 				</div>
 				<div class="form-group">
 					<p>
-						<input class="btn btn-default" type="button" onclick="valid(1)" name="text" id="text" value="Artikelsuche" />
-						<input class="btn btn-default" type="button" onclick="valid(0)" name="fulltext" id="fulltext" value="Volltextsuche" />
+						<input class="btn btn-primery" type="button" onclick="valid(1)" name="go" id="go" value="Artikelsuche" />
+						<input class="btn btn-primery" type="button" onclick="valid(0)" name="fulltext" id="fulltext" value="Volltextsuche" />
 					</p>
 				</div>
 			</fieldset>
@@ -73,7 +73,7 @@
       </div>
 	</div>
 	
-	<script type="text/javascript">
+ 	<script type="text/javascript">
 	var valid=function(id){
 		var search=document.getElementById("search").value;
 		if(search.length===0||search.length>=220||nurLeerzeichen(search)){
