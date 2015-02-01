@@ -82,9 +82,7 @@
 		var search=document.getElementById("search").value;
 		if(search.length===0||search.length>=50||nurLeerzeichen(search)){
 			$(document).ready(function(){
-				var $p=$("<p>Dieser Suchbegriff ist ungültig!</p>");
-				$('#search').after($p);
-				$p.fadeOut(2000);
+				alert("Keine gültige Eingabe!");
 			});
 		}
 		else{
