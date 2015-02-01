@@ -1,19 +1,22 @@
 body {
   padding-top: 50px;
 }
+
 .starter-template {
   padding: 40px 15px;
   text-align: center;
 }
 
-ul {
-	text-align: left;
-}
-
-ul a {
-	color: black;
-}
-
 .footer{
 	text-align: center;
+}
+
+.jumbotron{
+	text-align: center;
+}
+
+#dragme{ 
+	width: 150px; 
+	height: 150px; 
+	background-color: yellow;
 }
